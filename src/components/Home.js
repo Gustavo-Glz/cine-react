@@ -23,14 +23,14 @@ const Home = () => {
   };
 
   //Funcion filtrar en base a peliculas descubrimiento o los obtenidos en la busqueda.
-  const filtrar = (rat) => {
+  const filtrar = (star) => {
     let arreglo = [];
     if (buscar === "") {
       arreglo = peliculas;
     } else {
       arreglo = buscador;
     }
-    switch (rat) {
+    switch (star) {
       case 1:
         filtrados = arreglo.filter(
           (pelicula) => pelicula.vote_average >= 0 && pelicula.vote_average <= 2
